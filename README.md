@@ -33,6 +33,7 @@ Install dsoloview/laravel-yandex-captcha from composer
   <input type="text" name="email">  
  <input type="password" name="password">  
  <x-yandex-captcha></x-yandex-captcha>  
+ <button type="submit">Send</button>
 </form>
  ```
 4. Add YandexCaptcha validation rule
@@ -47,13 +48,13 @@ use Illuminate\Foundation\Http\FormRequest;
 class LoginRequest extends FormRequest  
 {  
   public function rules(): array  
-  {  
+{  
   return [  
   'email' => ['required', 'email'],  
   'password' => ['required', 'string', 'min:8'],  
-  'smart-captcha' => ['required', new YandexCaptcha]  
+  'smart-token' => ['required', new YandexCaptcha]  
   ];  
-  }  
+}
   
   public function authorize(): bool  
   {  
