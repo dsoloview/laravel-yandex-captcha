@@ -1,0 +1,23 @@
+{
+  "name": "dsoloview/laravel-yandex-captcha",
+  "description": "Yandex captcha integration for Laravel",
+  "keywords": ["Yandex SmartCaptcha", "Yandex Captha", "captcha", "Laravel"],
+  "require": {
+    "php": ">=8.0",
+    "laravel/framework": "^9"
+  },
+  "autoload" : {
+    "psr-4": {
+      "Dsoloview\\YandexCaptcha\\": "src/"
+    }
+  },
+
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Dsoloview\\YandexCaptcha\\LaravelProvider"
+      ]
+    }
+
+  }
+}
