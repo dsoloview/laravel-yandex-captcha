@@ -2,12 +2,13 @@
 
 namespace Dsoloview\YandexCaptcha\Rules;
 
-use Illuminate\Contracts\Validation\InvokableRule;
+use Closure;
+use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Support\Facades\Http;
 
-class YandexCaptcha implements InvokableRule
+class YandexCaptcha implements ValidationRule
 {
-    public function __invoke($attribute, $value, $fail)
+    public function validate(string $attribute, mixed $value, Closure $fail): void
     {
         $args = http_build_query([
             'secret' => config('yandex_captcha.server_key'),

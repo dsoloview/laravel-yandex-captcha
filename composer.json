@@ -4,7 +4,7 @@
   "keywords": ["Yandex SmartCaptcha", "Yandex Captha", "captcha", "Laravel"],
   "require": {
     "php": ">=8.0",
-    "laravel/framework": "^9"
+    "laravel/framework": "^10"
   },
   "autoload" : {
     "psr-4": {
