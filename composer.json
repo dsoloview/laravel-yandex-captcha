@@ -2,6 +2,14 @@
   "name": "dsoloview/laravel-yandex-captcha",
   "description": "Yandex captcha integration for Laravel",
   "keywords": ["Yandex SmartCaptcha", "Yandex Captha", "captcha", "Laravel"],
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Dmitry Soloviev",
+      "email": "dsoloview44@gmail.com"
+    }
+  ],
   "require": {
     "php": ">=8.0",
     "laravel/framework": "^10"
