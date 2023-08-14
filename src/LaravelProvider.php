@@ -2,6 +2,7 @@
 
 namespace Dsoloview\YandexCaptcha;
 
+use Dsoloview\YandexCaptcha\View\Components\ExtendedYandexCaptchaComponent;
 use Dsoloview\YandexCaptcha\View\Components\YandexCaptchaComponent;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
@@ -21,6 +22,7 @@ class LaravelProvider extends ServiceProvider
         ], 'yandex-captcha-config');
 
         Blade::component('yandex-captcha', YandexCaptchaComponent::class);
+        Blade::component('extended-yandex-captcha', ExtendedYandexCaptchaComponent::class);
     }
 
     public function register()
