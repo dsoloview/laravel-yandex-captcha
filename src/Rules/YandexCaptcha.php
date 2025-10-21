@@ -16,7 +16,7 @@ class YandexCaptcha implements ValidationRule
             'ip' => request()->ip(),
         ]);
 
-        $response = Http::get('https://captcha-api.yandex.ru/validate', $args);
+        $response = Http::get('https://smartcaptcha.yandexcloud.net/validate', $args);
 
         if ($response->status() !== 200) {
             $fail('Error with Yandex SmartCaptcha validation');
